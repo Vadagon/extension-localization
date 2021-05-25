@@ -1,0 +1,19 @@
+{
+  "name": "extension-localization",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vadagon/extension-localization.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vadagon/extension-localization/issues"
+  },
+  "homepage": "https://github.com/Vadagon/extension-localization#readme"
+}
