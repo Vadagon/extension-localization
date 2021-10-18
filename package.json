@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node index.js ./token.json",
     "serve": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Vadagon/extension-localization#readme",
   "dependencies": {
+    "@google-cloud/translate": "^6.3.0",
     "fs": "^0.0.1-security",
     "translatte": "^3.0.0"
   },

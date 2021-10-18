@@ -1,6 +1,11 @@
 const fs = require('fs');
 const path = require('path');
-const translatte = require('translatte');
+
+const tokenPath = process.argv[2];
+var credentials = require(tokenPath)
+
+const {Translate} = require('@google-cloud/translate').v2;
+const translate = new Translate({projectId: credentials.project_id, credentials});
 // const __dirname = path.resolve();
 // translatte('Do you speak Russian?', {to: 'ru'}).then(res => {
 //     console.log(res.text);
@@ -107,8 +112,9 @@ function readJSON(location) {
 
 
 function translateFromEng(txt, lang) {
-    return translatte(txt, { to: lang }).then(res => {
-        return res.text;
+    return translate.translate(txt, lang).then(res => {
+        const [translation] = res;
+        return translation;
     }).catch(err => {
         console.log(err)
         return err;
